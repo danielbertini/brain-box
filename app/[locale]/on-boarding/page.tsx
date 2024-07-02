@@ -55,7 +55,7 @@ export default function OnBoardingPage() {
               objectFit="cover"
             />
           </div>
-          <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden blur-2xl top-4 z-10">
+          <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl blur-2xl top-4 z-10">
             <Image
               alt="Astronaut"
               src="/images/astronaut.png"
