@@ -27,7 +27,14 @@
     }
   },
   "Chat": {
-    "Title": "Health"
+    "Title": "Health",
+    "Instructions": {
+      "1": "Remembers what user said earlier in the conversation.",
+      "2": "Allows user to provide. Follow-up corrections With Ai.",
+      "3": "Limited knowledge of world and events after 2021.",
+      "4": "May occasionally generate incorrect information.",
+      "5": "May occasionally produce harmful instructions or biased content."
+    }
   },
   "Theme": {
     "Light": "Light",
@@ -60,6 +67,7 @@
     "File": "Select a file",
     "Save": "Save",
     "Select": "Select...",
+    "SendAMessage": "Send a message...",
     "URL": "URL"
   },
   "Message": {
