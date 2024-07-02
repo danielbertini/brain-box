@@ -43,7 +43,7 @@ export default function OnBoardingPage() {
           <UiLanguageToggle /> */}
         </div>
       </div>
-      <div className="relative flex flex-col items-center w-full">
+      <div className="relative flex flex-col items-center overflow-visible">
         <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl top-4">
           <Image
             alt="Astronaut"
@@ -88,12 +88,10 @@ export default function OnBoardingPage() {
               <div
                 key={index}
                 className="text-center text-balance sm:w-[362px] w-[100%] space-y-2 mt-6 snap-center flex-shrink-0">
-                <h1 className="text-3xl font-bold text-secondary-900 dark:text-secondary-50 leading-10">
+                <h1 className="text-3xl font-bold text-secondary-900 dark:text-secondary-50">
                   {item.title}
                 </h1>
-                <p className="text-secondary-500 leading-7">
-                  {item.description}
-                </p>
+                <p className="text-secondary-500">{item.description}</p>
               </div>
             );
           })}
