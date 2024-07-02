@@ -12,22 +12,22 @@ import { UiLanguageToggle } from "@/components/language-toggle";
 export default function OnBoardingPage() {
   const router = useRouter();
   const tCommon = useTranslations("Common");
-  const tOmBoarding = useTranslations("OnBoarding");
+  const tOnBoarding = useTranslations("OnBoarding");
   const area2scroll = useRef<HTMLDivElement>(null);
   const [currentItem, setCurrentItem] = useState<Number>(0);
 
   const slides = [
     {
-      title: tOmBoarding("Slide1.Title"),
-      description: tOmBoarding("Slide1.Description"),
+      title: tOnBoarding("Slide1.Title"),
+      description: tOnBoarding("Slide1.Description"),
     },
     {
-      title: tOmBoarding("Slide2.Title"),
-      description: tOmBoarding("Slide2.Description"),
+      title: tOnBoarding("Slide2.Title"),
+      description: tOnBoarding("Slide2.Description"),
     },
     {
-      title: tOmBoarding("Slide3.Title"),
-      description: tOmBoarding("Slide3.Description"),
+      title: tOnBoarding("Slide3.Title"),
+      description: tOnBoarding("Slide3.Description"),
     },
   ];
 
@@ -42,7 +42,7 @@ export default function OnBoardingPage() {
           <UIButton
             variant="link"
             onPress={() => {
-              router.push("/dashboard/workplaces");
+              router.push("/chat");
             }}>
             {tCommon("Skip")}
           </UIButton>

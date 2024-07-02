@@ -26,6 +26,9 @@
       "Description": "Chat with the smartest AI Future Experience power of AI with us."
     }
   },
+  "Chat": {
+    "Title": "Health"
+  },
   "Theme": {
     "Light": "Light",
     "Dark": "Dark",

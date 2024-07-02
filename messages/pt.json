@@ -26,6 +26,9 @@
       "Description": "Converse com a IA mais inteligente. Experimente o poder do futuro da IA conosco."
     }
   },
+  "Chat": {
+    "Title": "Saúde"
+  },
   "Theme": {
     "Light": "Claro",
     "Dark": "Escuro",
