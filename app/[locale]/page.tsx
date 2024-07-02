@@ -19,7 +19,7 @@ export default function IndexPage() {
     <>
       <div className="w-screen h-screen flex items-center justify-center">
         <Logo />
-        <div className="flex flex-col items-center absolute bottom-4">
+        <div className="flex flex-col items-center absolute bottom-8">
           <span className="text-3xl font-bold text-secondary-900 dark:text-secondary-50">
             {tApp("Name")}
           </span>

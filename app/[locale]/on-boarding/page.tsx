@@ -1,10 +1,13 @@
 "use client";
-import UIButton from "@/ui/button";
+
+import Image from "next/image";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+import UIButton from "@/ui/button";
+import { UiThemeToggle } from "@/components/theme-toggle";
+import { UiLanguageToggle } from "@/components/language-toggle";
 
 export default function OnBoardingPage() {
   const router = useRouter();
@@ -29,7 +32,7 @@ export default function OnBoardingPage() {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-8">
       <div className="w-full flex items-center justify-between mb-4">
         <div className="container mx-auto flex items-center justify-end gap-2">
           <UIButton
@@ -39,8 +42,8 @@ export default function OnBoardingPage() {
             }}>
             {tCommon("Skip")}
           </UIButton>
-          {/* <UiThemeToggle />
-          <UiLanguageToggle /> */}
+          <UiThemeToggle />
+          <UiLanguageToggle />
         </div>
       </div>
       <div className="relative flex flex-col items-center overflow-visible">
@@ -50,7 +53,7 @@ export default function OnBoardingPage() {
             src="/images/astronaut.png"
             priority={true}
             fill={true}
-            style={{ filter: "blur(20px)", objectFit: "cover" }}
+            style={{ filter: "blur(20px)" }}
           />
         </div>
         <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden">
