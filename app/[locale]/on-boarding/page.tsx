@@ -46,13 +46,13 @@ export default function OnBoardingPage() {
           <UiLanguageToggle />
         </div>
       </div>
-      <div className="relative flex flex-col items-center overflow-visible">
-        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl top-4">
+      <div className="relative flex flex-col items-center">
+        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square top-4">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
-            priority={true}
-            fill={true}
+            priority
+            fill
             style={{ filter: "blur(20px)" }}
           />
         </div>
@@ -60,8 +60,8 @@ export default function OnBoardingPage() {
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
-            priority={true}
-            fill={true}
+            priority
+            fill
             style={{
               objectFit: "cover",
             }}
