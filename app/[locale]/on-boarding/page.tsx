@@ -31,9 +31,9 @@ export default function OnBoardingPage() {
   ];
 
   return (
-    <>
-      <header className="w-full flex items-center justify-between">
-        <div className="container mx-auto px-12 py-6 flex items-center justify-end gap-2">
+    <div className="p-4">
+      <div className="w-full flex items-center justify-between mb-4">
+        <div className="container mx-auto flex items-center justify-end gap-2">
           <UIButton
             variant="flat"
             onPress={() => {
@@ -44,10 +44,10 @@ export default function OnBoardingPage() {
           <UiThemeToggle />
           <UiLanguageToggle />
         </div>
-      </header>
-      <div className="px-12">
+      </div>
+      <div>
         <div className="relative flex flex-col items-center w-full">
-          <div className="relative sm:w-[362px] w-[100%] h-[400px] rounded-3xl overflow-hidden z-20">
+          <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden z-20">
             <Image
               alt="Astronaut"
               src="/images/astronaut.png"
@@ -55,7 +55,7 @@ export default function OnBoardingPage() {
               objectFit="cover"
             />
           </div>
-          <div className="absolute sm:w-[362px] w-[100%] h-[400px] rounded-3xl overflow-hidden blur-2xl top-4 z-10">
+          <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden blur-2xl top-4 z-10">
             <Image
               alt="Astronaut"
               src="/images/astronaut.png"
@@ -124,6 +124,6 @@ export default function OnBoardingPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
