@@ -46,7 +46,7 @@ export default function OnBoardingPage() {
         </div>
       </div>
       <div className="relative flex flex-col items-center w-full">
-        <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden z-20">
+        <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden z-10">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
@@ -54,7 +54,7 @@ export default function OnBoardingPage() {
             objectFit="cover"
           />
         </div>
-        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl blur-2xl top-4 z-10">
+        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl blur-2xl top-4">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
