@@ -1,6 +1,4 @@
 "use client";
-import { UiLanguageToggle } from "@/components/language-toggle";
-import { UiThemeToggle } from "@/components/theme-toggle";
 import UIButton from "@/ui/button";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -35,14 +33,14 @@ export default function OnBoardingPage() {
       <div className="w-full flex items-center justify-between mb-4">
         <div className="container mx-auto flex items-center justify-end gap-2">
           <UIButton
-            variant="flat"
+            variant="link"
             onPress={() => {
               router.push("/dashboard/workplaces");
             }}>
             {tCommon("Skip")}
           </UIButton>
-          <UiThemeToggle />
-          <UiLanguageToggle />
+          {/* <UiThemeToggle />
+          <UiLanguageToggle /> */}
         </div>
       </div>
       <div className="relative flex flex-col items-center w-full">
