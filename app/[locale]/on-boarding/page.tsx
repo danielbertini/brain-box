@@ -44,20 +44,24 @@ export default function OnBoardingPage() {
         </div>
       </div>
       <div className="relative flex flex-col items-center w-full">
-        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl blur-2xl top-4">
+        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl top-4">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
-            layout="fill"
-            objectFit="cover"
+            priority={true}
+            fill={true}
+            style={{ filter: "blur(20px)", objectFit: "cover" }}
           />
         </div>
         <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"
-            layout="fill"
-            objectFit="cover"
+            priority={true}
+            fill={true}
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
       </div>
