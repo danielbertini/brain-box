@@ -33,7 +33,7 @@ export default function OnBoardingPage() {
 
   return (
     <div className="p-8">
-      <div className="w-full flex items-center justify-between mb-4">
+      <div className="w-full flex items-center justify-between mb-4 z-10">
         <div className="container mx-auto flex items-center justify-end gap-2">
           <UIButton
             variant="link"
@@ -46,11 +46,16 @@ export default function OnBoardingPage() {
           <UiLanguageToggle />
         </div>
       </div>
-      <div className="relative flex flex-col items-center">
-        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square top-4 blur-xl">
-          <Image alt="Astronaut" src="/images/astronaut.png" priority fill />
+      <div className="relative flex flex-col items-center justify-center">
+        <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] aspect-square top-8 blur-xl z-0">
+          <Image
+            alt="Astronaut Blurry"
+            src="/images/astronaut.png"
+            priority
+            fill
+          />
         </div>
-        <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] h-auto aspect-square rounded-3xl overflow-hidden">
+        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] aspect-square rounded-3xl top-0 overflow-hidden z-10">
           <Image
             alt="Astronaut"
             src="/images/astronaut.png"

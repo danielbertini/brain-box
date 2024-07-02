@@ -12,7 +12,7 @@ export default function IndexPage() {
   useEffect(() => {
     setTimeout(() => {
       router.push("/on-boarding");
-    }, 5000);
+    }, 2500);
   }, [router]);
 
   return (
