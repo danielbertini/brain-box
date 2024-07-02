@@ -32,9 +32,13 @@ export default function OnBoardingPage() {
   ];
 
   return (
-    <div className="p-8">
-      <div className="w-full flex items-center justify-between mb-4 z-10">
-        <div className="container mx-auto flex items-center justify-end gap-2">
+    <div className="p-8 flex flex-col items-center">
+      <div className="w-full flex items-center justify-between mb-4">
+        <div className="container mx-auto flex items-center justify-between gap-2">
+          <div className="flex gap-2">
+            <UiThemeToggle />
+            <UiLanguageToggle />
+          </div>
           <UIButton
             variant="link"
             onPress={() => {
@@ -42,33 +46,21 @@ export default function OnBoardingPage() {
             }}>
             {tCommon("Skip")}
           </UIButton>
-          <UiThemeToggle />
-          <UiLanguageToggle />
         </div>
       </div>
-      <div className="relative flex flex-col items-center justify-center">
-        <div className="relative sm:w-[362px] w-[100%] sm:h-[400px] aspect-square top-8 blur-xl z-0">
-          <Image
-            alt="Astronaut Blurry"
-            src="/images/astronaut.png"
-            priority
-            fill
-          />
-        </div>
-        <div className="absolute sm:w-[362px] w-[100%] sm:h-[400px] aspect-square rounded-3xl top-0 overflow-hidden z-10">
-          <Image
-            alt="Astronaut"
-            src="/images/astronaut.png"
-            priority
-            fill
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
+      <div className="relative w-full sm:w-[362px] aspect-square rounded-3xl overflow-hidden">
+        <Image
+          alt="Astronaut"
+          src="/images/astronaut.png"
+          priority
+          fill
+          style={{
+            objectFit: "cover",
+          }}
+        />
       </div>
       <div className="relative flex flex-col items-center w-full">
-        <div className="flex items-center justify-center gap-4 mt-9">
+        <div className="flex items-center justify-center gap-4 mt-6">
           {Array.from({ length: slides.length }, (_, index) => {
             return (
               <div
@@ -89,7 +81,7 @@ export default function OnBoardingPage() {
             return (
               <div
                 key={index}
-                className="text-center text-balance sm:w-[362px] w-[100%] space-y-2 mt-6 snap-center flex-shrink-0">
+                className="text-center text-balance sm:w-[362px] w-[100%] space-y-2 mt-4 snap-center flex-shrink-0">
                 <h1 className="text-3xl font-bold text-secondary-900 dark:text-secondary-50">
                   {item.title}
                 </h1>
@@ -98,7 +90,7 @@ export default function OnBoardingPage() {
             );
           })}
         </div>
-        <div className="flex items-center justify-center gap-2 mt-6 rounded-xl shadow-2xl bg-neutral-50 dark:bg-neutral-800">
+        <div className="flex items-center justify-center gap-2 mt-4 rounded-xl shadow-2xl bg-neutral-50 dark:bg-neutral-800">
           <UIButton
             variant="link"
             isDisabled={Number(currentItem) === 0}
