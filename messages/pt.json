@@ -1,0 +1,147 @@
+{
+  "App": {
+    "Name": "BrainBox",
+    "Description": "Teste para a LaborIt..."
+  },
+  "Common": {
+    "Welcome": "Bem vindo(a)",
+    "Product": "Produto",
+    "About": "Sobre",
+    "Account": "Sua conta",
+    "Version": "Versão",
+    "Skip": "Pular",
+    "Loading": "Carregando..."
+  },
+  "OnBoarding": {
+    "Slide1": {
+      "Title": "Desbloqueie o Poder do Futuro da IA",
+      "Description": "Converse com a IA mais inteligente. Experimente o poder do futuro da IA conosco."
+    },
+    "Slide2": {
+      "Title": "Desbloqueie o Poder do Futuro da IA",
+      "Description": "Converse com a IA mais inteligente. Experimente o poder do futuro da IA conosco."
+    },
+    "Slide3": {
+      "Title": "Desbloqueie o Poder do Futuro da IA",
+      "Description": "Converse com a IA mais inteligente. Experimente o poder do futuro da IA conosco."
+    }
+  },
+  "Theme": {
+    "Light": "Claro",
+    "Dark": "Escuro",
+    "System": "Sistema"
+  },
+  "Language": {
+    "English": "Inglês",
+    "Portuguese": "Português"
+  },
+  "Form": {
+    "Name": "Nome",
+    "YourName": "Seu nome",
+    "CompanyName": "Nome da empresa",
+    "YourEmail": "Seu e-mail",
+    "Email": "E-mail",
+    "Code": "Código",
+    "Password": "Senha",
+    "CreateAPassword": "Crie uma senha",
+    "ForgotPassword": "Esqueceu sua senha?",
+    "Submit": "Enviar",
+    "Continue": "Continuar",
+    "Cancel": "Cancelar",
+    "Yes": "Sim",
+    "No": "Não",
+    "Search": "Buscar",
+    "Create": "Criar",
+    "Edit": "Editar",
+    "Add": "Adicionar",
+    "File": "Selecione um arquivo",
+    "Save": "Salvar",
+    "Select": "Selecione...",
+    "URL": "URL"
+  },
+  "Message": {
+    "Info": {
+      "AreYouSure": "Tem certeza?",
+      "YouWantToLogOut": "Tem certeza de que deseja desconectar da sua conta?",
+      "YouWantToDeleteWorkplace": "Tem certeza de que deseja remover este local? Todas as informações relacionadas ao local serão perdidas. Esta ação não pode ser desfeita.",
+      "YouWantToDeleteScreen": "Tem certeza de que deseja remover esta tela? Todas as informações relacionadas ao local serão perdidas. Esta ação não pode ser desfeita.",
+      "YouWantToDeletePlaylist": "Tem certeza de que deseja remover esta playlist? Todas as informações relacionadas à playlist serão perdidas. Esta ação não pode ser desfeita.",
+      "YouWantToDeleteItem": "Tem certeza de que deseja remover este item? Todas as informações relacionadas ao item serão perdidas. Esta ação não pode ser desfeita.",
+      "CreateScreenInstructions": "Para sincronizar com uma tela, insira o código gerado no aplicativo Nivens Player acessando (d.nivens.com.br) no navegador de sua smart TV.",
+      "TotalScreens": "{count, plural, =0 {Nenhuma tela} =1 {1 tela} other {# telas}}"
+    },
+    "Error": {
+      "InvalidEmail": "E-mail inválido",
+      "InvalidPassword": "Senha inválida",
+      "MinSize": "Precisa ter ao menos {min} caracteres",
+      "MaxSize": "Precisa ter no maximo {max} caracteres",
+      "EmailAlreadyExists": "E-mail já existe",
+      "Unexpected": "Erro inesperado",
+      "InvalidFields": "Campos inválidos",
+      "InvalidCredentials": "Credenciais inválidas",
+      "InvalidCode": "Código inválido",
+      "CodeAlreadyInUse": "Código já em uso",
+      "AccessDenied": "Acesso negado",
+      "Duplicated": "Já existe",
+      "NoFileSelected": "Nenhum arquivo selecionado",
+      "UploadFailed": "Falha no envio"
+    },
+    "Success": {
+      "LoggedIn": "Logado",
+      "Registered": "Registrado",
+      "LoggedOut": "Deslogado",
+      "PasswordChanged": "Senha alterada",
+      "Done": "Feito"
+    }
+  },
+  "Page": {
+    "Dashboard": {
+      "Title": "Painel",
+      "Menu": {
+        "LogOut": "Sair",
+        "Workplace": "Local",
+        "SearchWorkplace": "Buscar local...",
+        "SearchPlaylist": "Buscar playlist...",
+        "Workplaces": "Locais",
+        "Screen": "Tela",
+        "Screens": "Telas",
+        "Playlist": "Playlist",
+        "Playlists": "Playlists",
+        "Schedules": "Programação",
+        "Settings": {
+          "Title": "Configurações",
+          "Profile": "Perfil",
+          "Company": "Empresa",
+          "Team": "Equipe",
+          "Billing": "Faturamento"
+        }
+      }
+    },
+    "LogIn": {
+      "Title": "Entrar"
+    },
+    "SignUp": {
+      "Title": "Cadastrar"
+    },
+    "Pricing": {
+      "Title": "Preço"
+    },
+    "Features": {
+      "Title": "Recursos"
+    },
+    "PrivacyPolice": {
+      "Title": "Política de Privacidade"
+    },
+    "TermsOfUse": {
+      "Title": "Termos de Uso"
+    }
+  },
+  "Apps": {
+    "Image": {
+      "Name": "Imagem"
+    },
+    "Video": {
+      "Name": "Video"
+    }
+  }
+}

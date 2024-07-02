@@ -1,0 +1,147 @@
+{
+  "App": {
+    "Name": "BrainBox",
+    "Description": "Test for LaborIt..."
+  },
+  "Common": {
+    "Welcome": "Welcome",
+    "Product": "Product",
+    "About": "About",
+    "Account": "Account",
+    "Version": "Version",
+    "Skip": "Skip",
+    "Loading": "Loading..."
+  },
+  "OnBoarding": {
+    "Slide1": {
+      "Title": "Unlock the Power Of  Future AI",
+      "Description": "Chat with the smartest AI Future Experience power of AI with us."
+    },
+    "Slide2": {
+      "Title": "Unlock the Power Of  Future AI",
+      "Description": "Chat with the smartest AI Future Experience power of AI with us."
+    },
+    "Slide3": {
+      "Title": "Unlock the Power Of  Future AI",
+      "Description": "Chat with the smartest AI Future Experience power of AI with us."
+    }
+  },
+  "Theme": {
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
+  },
+  "Language": {
+    "English": "English",
+    "Portuguese": "Portuguese"
+  },
+  "Form": {
+    "Name": "Name",
+    "YourName": "Your name",
+    "CompanyName": "Company name",
+    "YourEmail": "Your email",
+    "Email": "Email",
+    "Code": "Code",
+    "Password": "Password",
+    "CreateAPassword": "Create a password",
+    "ForgotPassword": "Forgot Password",
+    "Submit": "Submit",
+    "Continue": "Continue",
+    "Cancel": "Cancel",
+    "Yes": "Yes",
+    "No": "No",
+    "Search": "Search",
+    "Create": "Create",
+    "Edit": "Edit",
+    "Add": "Add",
+    "File": "Select a file",
+    "Save": "Save",
+    "Select": "Select...",
+    "URL": "URL"
+  },
+  "Message": {
+    "Info": {
+      "AreYouSure": "Are you sure?",
+      "YouWantToLogOut": "Are you sure you want to log out from your account?",
+      "YouWantToDeleteWorkplace": "Are you sure you want to delete this workplace? All information related to the workplace will be lost. This action cannot be undone.",
+      "YouWantToDeleteScreen": "Are you sure you want to delete this screen? All information related to the screen will be lost. This action cannot be undone.",
+      "YouWantToDeletePlaylist": "Are you sure you want to delete this playlist? All information related to the playlist will be lost. This action cannot be undone.",
+      "YouWantToDeleteItem": "Are you sure you want to delete this item? All information related to the item will be lost. This action cannot be undone.",
+      "CreateScreenInstructions": "To sync with a screen, enter the generated code in the Nivens Player app by accessing (d.nivens.com.br) on your smart TV's browser.",
+      "TotalScreens": "{count, plural, =0 {No screen} =1 {1 screen} other {# screens}}"
+    },
+    "Error": {
+      "InvalidEmail": "Invalid Email",
+      "InvalidPassword": "Invalid Password",
+      "MinSize": "Must be at least {min} characters",
+      "MaxSize": "Must be less than {max} characters",
+      "EmailAlreadyExists": "Email already exists",
+      "Unexpected": "Unexpected Error",
+      "InvalidFields": "Invalid fields",
+      "InvalidCredentials": "Invalid credentials",
+      "InvalidCode": "Invalid code",
+      "CodeAlreadyInUse": "Code already in use",
+      "AccessDenied": "Access Denied",
+      "Duplicated": "Already exists",
+      "NoFileSelected": "No file selected",
+      "UploadFailed": "Upload failed"
+    },
+    "Success": {
+      "LoggedIn": "Logged In",
+      "Registered": "Registered",
+      "LoggedOut": "Logged Out",
+      "PasswordChanged": "Password Changed",
+      "Done": "Done"
+    }
+  },
+  "Page": {
+    "Dashboard": {
+      "Title": "Dashboard",
+      "Menu": {
+        "LogOut": "Log Out",
+        "Workplace": "Workplace",
+        "SearchWorkplace": "Search workplace...",
+        "SearchPlaylist": "Search playlist...",
+        "Workplaces": "Workplaces",
+        "Screen": "Screen",
+        "Screens": "Screens",
+        "Playlist": "Playlist",
+        "Playlists": "Playlists",
+        "Schedules": "Schedules",
+        "Settings": {
+          "Title": "Settings",
+          "Profile": "Profile",
+          "Company": "Company",
+          "Team": "Team",
+          "Billing": "Billing"
+        }
+      }
+    },
+    "LogIn": {
+      "Title": "Log In"
+    },
+    "SignUp": {
+      "Title": "Sign Up"
+    },
+    "Pricing": {
+      "Title": "Pricing"
+    },
+    "Features": {
+      "Title": "Features"
+    },
+    "PrivacyPolice": {
+      "Title": "Privacy Police"
+    },
+    "TermsOfUse": {
+      "Title": "Terms of Use"
+    }
+  },
+  "Apps": {
+    "Image": {
+      "Name": "Image"
+    },
+    "Video": {
+      "Name": "Video"
+    }
+  }
+}
