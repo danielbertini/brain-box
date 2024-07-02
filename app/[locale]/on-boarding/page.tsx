@@ -48,29 +48,16 @@ export default function OnBoardingPage() {
           </UIButton>
         </div>
       </div>
-      <div className="relative w-full sm:w-[362px] aspect-square z-10">
-        <div className="relative w-full sm:w-[362px] aspect-square rounded-3xl overflow-hidden z-10">
-          <Image
-            alt="Astronaut"
-            src="/images/astronaut.png"
-            priority
-            fill
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
-        <div className="absolute w-full sm:w-[362px] aspect-square rounded-3xl overflow-hidden blur-xl top-7">
-          <Image
-            alt="Astronaut"
-            src="/images/astronaut.png"
-            priority
-            fill
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
+      <div className="relative w-full sm:w-[362px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
+        <Image
+          alt="Astronaut"
+          src="/images/astronaut.png"
+          priority
+          fill
+          style={{
+            objectFit: "cover",
+          }}
+        />
       </div>
       <div className="relative flex flex-col items-center w-full">
         <div className="flex items-center justify-center gap-4 mt-6">
@@ -103,7 +90,7 @@ export default function OnBoardingPage() {
             );
           })}
         </div>
-        <div className="flex items-center justify-center gap-2 mt-4 rounded-xl shadow-2xl bg-secondary-500/10">
+        <div className="flex items-center justify-center gap-2 mt-4 rounded-xl bg-secondary-500/10">
           <UIButton
             variant="link"
             isDisabled={Number(currentItem) === 0}
