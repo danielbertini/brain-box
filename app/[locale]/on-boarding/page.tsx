@@ -32,8 +32,8 @@ export default function OnBoardingPage() {
   ];
 
   return (
-    <div className="p-8 flex flex-col items-center">
-      <div className="w-full flex items-center justify-between mb-4">
+    <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
+      <div className="w-full flex items-center justify-between">
         <div className="container mx-auto flex items-center justify-between gap-2">
           <div className="flex gap-2">
             <UiThemeToggle />
@@ -48,7 +48,7 @@ export default function OnBoardingPage() {
           </UIButton>
         </div>
       </div>
-      <div className="relative w-full sm:w-[362px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
+      <div className="relative w-full sm:w-[362px] h-full rounded-3xl overflow-hidden shadow-2xl">
         <Image
           alt="Astronaut"
           src="/images/astronaut.png"
@@ -60,7 +60,7 @@ export default function OnBoardingPage() {
         />
       </div>
       <div className="relative flex flex-col items-center w-full">
-        <div className="flex items-center justify-center gap-4 mt-6">
+        <div className="flex items-center justify-center gap-4 mt-2">
           {Array.from({ length: slides.length }, (_, index) => {
             return (
               <div
