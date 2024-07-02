@@ -60,7 +60,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${font.variable} bg-secondary-50 dark:bg-secondary-900 font-sans overflow-x-hidden h-screen`}>
+        className={`${font.variable} bg-secondary-50 dark:bg-secondary-900 font-sans overflow-x-hidden h-svh`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
