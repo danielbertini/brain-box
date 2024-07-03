@@ -70,6 +70,13 @@
   "EditInformations": {
     "Title": "Editar Informações"
   },
+  "InviteFriends": {
+    "Title": "Convidar Amigos",
+    "Content": {
+      "Title": "Indique um Amigo",
+      "Description": "Compartilhe seu Código Promocional e Ganhe $3 para Cada Amigo"
+    }
+  },
   "Theme": {
     "Light": "Claro",
     "Dark": "Escuro",

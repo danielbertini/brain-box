@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import UIButton from "@/ui/button";
 import { ChevronLeft } from "lucide-react";
 import UITextField from "@/ui/textField";
-import { Separator } from "react-aria-components";
 
 export default function EditInformationsPage() {
   const router = useRouter();
@@ -36,9 +35,12 @@ export default function EditInformationsPage() {
           <UITextField label={tForm("FullName")}></UITextField>
           <UITextField label={tForm("Email")}></UITextField>
           <UITextField label={tForm("Password")}></UITextField>
-          <Separator className="border-transparent" />
-          <UIButton onPress={() => {}}>{tForm("SaveChanges")}</UIButton>
         </div>
+      </div>
+      <div className="flex-none flex items-center justify-start w-full gap-2">
+        <UIButton onPress={() => {}} className="w-full">
+          {tForm("SaveChanges")}
+        </UIButton>
       </div>
     </div>
   );

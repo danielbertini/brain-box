@@ -88,7 +88,7 @@ export default function PreferencesPage() {
             tPreferences("Menu.PaymentMethods.Description")
           )}
           {renderMenuItem(
-            "",
+            "/invite-friends",
             <Pencil className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tPreferences("Menu.InviteYourFriends.Title"),

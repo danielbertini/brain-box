@@ -70,6 +70,13 @@
   "EditInformations": {
     "Title": "Edit Informations"
   },
+  "InviteFriends": {
+    "Title": "Invite Friends",
+    "Content": {
+      "Title": "Refer A Friend",
+      "Description": "Share Your Promo Code & Get $3 For Each Friend"
+    }
+  },
   "Theme": {
     "Light": "Light",
     "Dark": "Dark",
