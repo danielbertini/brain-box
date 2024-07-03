@@ -26,10 +26,10 @@ export default function PreferencesPage() {
         <div className="flex flex-row items-center gap-4">
           {iconLeft && iconLeft}
           <div className="flex flex-col">
-            <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold">
+            <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold line-clamp-1">
               {text}
             </span>
-            <span className="text-secondary-500 text-left text-sm">
+            <span className="text-secondary-500 text-left text-sm line-clamp-1">
               {description}
             </span>
           </div>

@@ -34,7 +34,7 @@ export default function ProfilePage() {
         onClick={() => router.push(url)}>
         <div className="flex flex-row items-center gap-4">
           {iconLeft && iconLeft}
-          <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold">
+          <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold line-clamp-1">
             {text}
           </span>
         </div>
