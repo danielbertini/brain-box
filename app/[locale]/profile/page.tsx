@@ -6,14 +6,20 @@ import {
   ChevronLeft,
   ChevronRight,
   CircleHelp,
+  Clock,
+  Home,
+  LayoutDashboard,
   Lock,
   LogOut,
   Settings,
+  UserRound,
 } from "lucide-react";
 import Image from "next/image";
+import UIMeter from "@/ui/meter";
 
 export default function ProfilePage() {
   const router = useRouter();
+  const tCommon = useTranslations("Common");
   const tProfile = useTranslations("Profile");
 
   const renderMenuItem = (
@@ -57,7 +63,7 @@ export default function ProfilePage() {
           <span className="text-3xl font-bold text-secondary-900 dark:text-secondary-50 w-full text-center">
             Daniel Bertini
           </span>
-          <span className="text-secondary-500/50 text-sm w-full text-center">
+          <span className="text-secondary-500 text-sm w-full text-center">
             danielbertini@mail.com
           </span>
         </div>
@@ -90,27 +96,48 @@ export default function ProfilePage() {
         <div className="flex-none flex flex-col items-center justify-between h-12 w-full gap-6 mt-8">
           {renderMenuItem(
             <Settings className="w-8 h-8" />,
-            <ChevronRight />,
+            <ChevronRight className="opacity-50" />,
             tProfile("Menu.Preferences")
           )}
           {renderMenuItem(
             <Lock className="w-8 h-8" />,
-            <ChevronRight />,
+            <ChevronRight className="opacity-50" />,
             tProfile("Menu.AccountSecurity")
           )}
+          <div className="w-full px-12">
+            <UIMeter label={tCommon("Excellent")} value={80} />
+          </div>
           {renderMenuItem(
             <CircleHelp className="w-8 h-8" />,
-            <ChevronRight />,
+            <ChevronRight className="opacity-50" />,
             tProfile("Menu.CustomerSupport")
           )}
           {renderMenuItem(
             <LogOut className="w-8 h-8" />,
-            <ChevronRight />,
+            <></>,
             tProfile("Menu.Logout")
           )}
         </div>
       </div>
-      <div className="flex-none flex items-center justify-between h-12 w-full gap-2"></div>
+      <div className="flex-none flex items-center justify-between h-12 w-full gap-2">
+        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+          <Home className="opacity-50" />
+        </UIButton>
+        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+          <LayoutDashboard className="opacity-50" />
+        </UIButton>
+        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+          <Clock className="opacity-50" />
+        </UIButton>
+        <UIButton
+          sizeType="icon"
+          variant="link"
+          onPress={() => {}}
+          className="relative">
+          <UserRound />
+          <div className="w-2 h-2 bg-secondary-900 dark:bg-secondary-50 rounded-full absolute bottom-[-12px]" />
+        </UIButton>
+      </div>
     </div>
   );
 }
