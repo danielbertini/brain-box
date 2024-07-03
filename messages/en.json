@@ -67,6 +67,9 @@
       }
     }
   },
+  "EditInformations": {
+    "Title": "Edit Informations"
+  },
   "Theme": {
     "Light": "Light",
     "Dark": "Dark",

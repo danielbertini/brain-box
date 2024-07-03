@@ -127,18 +127,18 @@ export default function ProfilePage() {
         </div>
       </div>
       <div className="flex-none flex items-center justify-between h-12 w-full gap-2">
-        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+        <UIButton sizeType="icon" variant="flat" onPress={() => {}}>
           <Home className="opacity-50" />
         </UIButton>
-        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+        <UIButton sizeType="icon" variant="flat" onPress={() => {}}>
           <LayoutDashboard className="opacity-50" />
         </UIButton>
-        <UIButton sizeType="icon" variant="link" onPress={() => {}}>
+        <UIButton sizeType="icon" variant="flat" onPress={() => {}}>
           <Clock className="opacity-50" />
         </UIButton>
         <UIButton
           sizeType="icon"
-          variant="link"
+          variant="flat"
           onPress={() => {}}
           className="relative">
           <UserRound />

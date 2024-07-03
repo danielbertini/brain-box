@@ -10,19 +10,24 @@ import {
   UserRound,
   Wallet,
 } from "lucide-react";
+import { UiThemeToggle } from "@/components/theme-toggle";
+import { UiLanguageToggle } from "@/components/language-toggle";
 
 export default function PreferencesPage() {
   const router = useRouter();
   const tPreferences = useTranslations("Preferences");
 
   const renderMenuItem = (
+    url: string,
     iconLeft: React.ReactElement,
     iconRight: React.ReactElement,
     text: string,
     description: string
   ) => {
     return (
-      <div className="flex flex-row items-center justify-between w-full gap-4 cursor-pointer active:scale-95 duration-150">
+      <div
+        className="flex flex-row items-center justify-between w-full gap-4 cursor-pointer active:scale-95 duration-150"
+        onClick={() => router.push(url)}>
         <div className="flex flex-row items-center gap-4">
           {iconLeft && iconLeft}
           <div className="flex flex-col">
@@ -62,30 +67,38 @@ export default function PreferencesPage() {
       <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto">
         <div className="flex-none flex flex-col items-center justify-between h-12 w-full gap-6 mt-8">
           {renderMenuItem(
+            "/edit-informations",
             <UserRound className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tPreferences("Menu.AccountInformation.Title"),
             tPreferences("Menu.AccountInformation.Description")
           )}
           {renderMenuItem(
+            "",
             <Eye className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tPreferences("Menu.Password.Title"),
             tPreferences("Menu.Password.Description")
           )}
           {renderMenuItem(
+            "",
             <Wallet className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tPreferences("Menu.PaymentMethods.Title"),
             tPreferences("Menu.PaymentMethods.Description")
           )}
           {renderMenuItem(
+            "",
             <Pencil className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tPreferences("Menu.InviteYourFriends.Title"),
             tPreferences("Menu.InviteYourFriends.Description")
           )}
         </div>
+      </div>
+      <div className="flex-none flex items-center justify-start h-12 w-full gap-2">
+        <UiThemeToggle />
+        <UiLanguageToggle />
       </div>
     </div>
   );
