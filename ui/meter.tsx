@@ -23,9 +23,9 @@ export default function UIMeter({
               style={{ width: percentage + "%" }}
             />
           </div>
-          <div className="flex items-center justify-between gap-2 mt-2">
+          <div className="flex items-center justify-between gap-2 mt-2 text-secondary-500">
             <Label>{label}</Label>
-            <span className={`text-secondary-500`}>{" " + valueText}</span>
+            <span>{" " + valueText}</span>
           </div>
         </>
       )}

@@ -28,7 +28,7 @@ export default function ProfilePage() {
     text: string
   ) => {
     return (
-      <div className="flex flex-row items-center justify-between w-full gap-4">
+      <div className="flex flex-row items-center justify-between w-full gap-4 cursor-pointer active:scale-95 duration-150">
         <div className="flex flex-row items-center gap-4">
           {iconLeft && iconLeft}
           <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold">
