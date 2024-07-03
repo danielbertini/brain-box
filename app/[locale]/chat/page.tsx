@@ -18,7 +18,7 @@ export default function ChatPage() {
         <span className="text-3xl font-bold text-secondary-500 my-12 w-full text-center">
           {tApp("Name")}
         </span>
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-2 w-full">
           <UICard
             variant="flat"
             className="text-secondary-500 p-4 w-full text-sm text-center text-balance">
@@ -51,8 +51,8 @@ export default function ChatPage() {
 
   return (
     <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
-      <div className="flex-none flex items-center justify-between w-full">
-        <div className="flex gap-2">
+      <div className="flex-none flex items-center justify-between w-full gap-2">
+        <div className="w-12 min-w-12 h-12 min-h-12">
           <UIButton
             variant="flat"
             sizeType="icon"
@@ -62,17 +62,17 @@ export default function ChatPage() {
             <ChevronLeft />
           </UIButton>
         </div>
-        <div>
+        <div className="w-full flex items-center justify-center">
           <h1 className="text-xl font-semibold text-secondary-900 dark:text-secondary-50">
             {tChat("Title")}
           </h1>
         </div>
-        <div className="flex gap-2">
+        <div className="w-12 min-w-12 h-12 min-h-12">
           <UIButton
             variant="link"
             sizeType="icon"
             onPress={() => {
-              router.push("/dashboard/workplaces");
+              router.push("/profile");
             }}>
             <Ellipsis />
           </UIButton>

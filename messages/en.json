@@ -36,6 +36,9 @@
       "5": "May occasionally produce harmful instructions or biased content."
     }
   },
+  "Profile": {
+    "Title": "Profile"
+  },
   "Theme": {
     "Light": "Light",
     "Dark": "Dark",

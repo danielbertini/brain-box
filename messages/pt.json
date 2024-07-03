@@ -27,7 +27,17 @@
     }
   },
   "Chat": {
-    "Title": "Saúde"
+    "Title": "Saúde",
+    "Instructions": {
+      "1": "Lembra o que o usuário disse anteriormente na conversa.",
+      "2": "Permite que o usuário forneça correções de acompanhamento com a IA.",
+      "3": "Conhecimento limitado do mundo e eventos após 2021.",
+      "4": "Pode ocasionalmente gerar informações incorretas.",
+      "5": "Pode ocasionalmente produzir instruções prejudiciais ou conteúdo tendencioso."
+    }
+  },
+  "Profile": {
+    "Title": "Perfil"
   },
   "Theme": {
     "Light": "Claro",
