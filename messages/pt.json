@@ -46,6 +46,27 @@
       "Logout": "Sair"
     }
   },
+  "Preferences": {
+    "Title": "Preferências",
+    "Menu": {
+      "AccountInformation": {
+        "Title": "Informações da Conta",
+        "Description": "Altere as informações da sua conta"
+      },
+      "Password": {
+        "Title": "Senha",
+        "Description": "Altere a senha da sua conta"
+      },
+      "PaymentMethods": {
+        "Title": "Métodos de Pagamento",
+        "Description": "Adicione cartões de crédito e débito"
+      },
+      "InviteYourFriends": {
+        "Title": "Convide Seus Amigos",
+        "Description": "Ganhe $3 para cada convite!"
+      }
+    }
+  },
   "Theme": {
     "Light": "Claro",
     "Dark": "Escuro",

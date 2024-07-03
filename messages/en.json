@@ -46,6 +46,27 @@
       "Logout": "Logout"
     }
   },
+  "Preferences": {
+    "Title": "Preferences",
+    "Menu": {
+      "AccountInformation": {
+        "Title": "Account Information",
+        "Description": "Change your account information"
+      },
+      "Password": {
+        "Title": "Password",
+        "Description": "Change your account password"
+      },
+      "PaymentMethods": {
+        "Title": "Payment Methods",
+        "Description": "Add your credit / debt cards"
+      },
+      "InviteYourFriends": {
+        "Title": "Invite Your Friends",
+        "Description": "Get $3 for each invitation!"
+      }
+    }
+  },
   "Theme": {
     "Light": "Light",
     "Dark": "Dark",

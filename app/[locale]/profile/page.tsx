@@ -9,7 +9,7 @@ import {
   Clock,
   Home,
   LayoutDashboard,
-  Lock,
+  LockKeyholeOpen,
   LogOut,
   Settings,
   UserRound,
@@ -23,12 +23,15 @@ export default function ProfilePage() {
   const tProfile = useTranslations("Profile");
 
   const renderMenuItem = (
+    url: string,
     iconLeft: React.ReactElement,
     iconRight: React.ReactElement,
     text: string
   ) => {
     return (
-      <div className="flex flex-row items-center justify-between w-full gap-4 cursor-pointer active:scale-95 duration-150">
+      <div
+        className="flex flex-row items-center justify-between w-full gap-4 cursor-pointer active:scale-95 duration-150"
+        onClick={() => router.push(url)}>
         <div className="flex flex-row items-center gap-4">
           {iconLeft && iconLeft}
           <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold">
@@ -95,12 +98,14 @@ export default function ProfilePage() {
         {renderProfileInfo()}
         <div className="flex-none flex flex-col items-center justify-between h-12 w-full gap-6 mt-8">
           {renderMenuItem(
+            "/preferences",
             <Settings className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tProfile("Menu.Preferences")
           )}
           {renderMenuItem(
-            <Lock className="w-8 h-8" />,
+            "",
+            <LockKeyholeOpen className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tProfile("Menu.AccountSecurity")
           )}
@@ -108,11 +113,13 @@ export default function ProfilePage() {
             <UIMeter label={tCommon("Excellent")} value={80} />
           </div>
           {renderMenuItem(
+            "",
             <CircleHelp className="w-8 h-8" />,
             <ChevronRight className="opacity-50" />,
             tProfile("Menu.CustomerSupport")
           )}
           {renderMenuItem(
+            "",
             <LogOut className="w-8 h-8" />,
             <></>,
             tProfile("Menu.Logout")
