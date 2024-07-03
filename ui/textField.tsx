@@ -48,13 +48,13 @@ export default function UITextField({
             text-secondary-900
             border-secondary-500/0
             bg-secondary-500/20
-            data-[hovered]:border-primary-500
-            data-[focused]:border-primary-500
+            data-[hovered]:border-secondary-500
+            data-[focused]:border-secondary-500
             dark:text-secondary-100
             dark:border-secondary-500/0
             dark:bg-secondary-500/20
-            dark:data-[hovered]:border-primary-500
-            dark:data-[focused]:border-primary-500
+            dark:data-[hovered]:border-secondary-500
+            dark:data-[focused]:border-secondary-500
         `,
           errorMessage &&
             "border-rose-500 data-[hovered]:border-rose-500 data-[focused]:border-rose-500 dark:border-rose-500 dark:data-[hovered]:border-rose-500 dark:data-[focused]:border-rose-500",

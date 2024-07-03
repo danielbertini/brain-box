@@ -80,29 +80,11 @@
     "Portuguese": "Português"
   },
   "Form": {
-    "Name": "Nome",
-    "YourName": "Seu nome",
-    "CompanyName": "Nome da empresa",
-    "YourEmail": "Seu e-mail",
+    "FullName": "Nome Completo",
     "Email": "E-mail",
-    "Code": "Código",
     "Password": "Senha",
-    "CreateAPassword": "Crie uma senha",
-    "ForgotPassword": "Esqueceu sua senha?",
-    "Submit": "Enviar",
-    "Continue": "Continuar",
-    "Cancel": "Cancelar",
-    "Yes": "Sim",
-    "No": "Não",
-    "Search": "Buscar",
-    "Create": "Criar",
-    "Edit": "Editar",
-    "Add": "Adicionar",
-    "File": "Selecione um arquivo",
-    "Save": "Salvar",
-    "Select": "Selecione...",
-    "SendAMessage": "Envie uma mensagem...",
-    "URL": "URL"
+    "SaveChanges": "Salvar Alterações",
+    "SendAMessage": "Envie uma mensagem..."
   },
   "Message": {
     "Info": {

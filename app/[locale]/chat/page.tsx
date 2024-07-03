@@ -84,7 +84,7 @@ export default function ChatPage() {
       <div className="flex-none flex items-center justify-between h-12 w-full">
         <UITextField
           placeHolder={tForm("SendAMessage")}
-          className="rounded-r-none"></UITextField>
+          className="rounded-r-none border-r-0"></UITextField>
         <UIButton sizeType="icon" className="rounded-l-none">
           <SendHorizontal />
         </UIButton>

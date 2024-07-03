@@ -3,9 +3,12 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import UIButton from "@/ui/button";
 import { ChevronLeft } from "lucide-react";
+import UITextField from "@/ui/textField";
+import { Separator } from "react-aria-components";
 
 export default function EditInformationsPage() {
   const router = useRouter();
+  const tForm = useTranslations("Form");
   const tEditInformations = useTranslations("EditInformations");
 
   return (
@@ -28,7 +31,15 @@ export default function EditInformationsPage() {
         </div>
         <div className="w-12 min-w-12 h-12 min-h-12"></div>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto"></div>
+      <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto pt-6">
+        <div className="flex flex-col space-y-4">
+          <UITextField label={tForm("FullName")}></UITextField>
+          <UITextField label={tForm("Email")}></UITextField>
+          <UITextField label={tForm("Password")}></UITextField>
+          <Separator className="border-transparent" />
+          <UIButton onPress={() => {}}>{tForm("SaveChanges")}</UIButton>
+        </div>
+      </div>
     </div>
   );
 }

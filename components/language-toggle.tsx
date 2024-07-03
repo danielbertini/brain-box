@@ -26,7 +26,7 @@ export function UiLanguageToggle() {
   return (
     <UIMenu
       trigger={
-        <UIButton variant="flat" sizeType="icon">
+        <UIButton variant="link" sizeType="icon">
           <Globe />
         </UIButton>
       }>
