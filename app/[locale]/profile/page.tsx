@@ -46,7 +46,7 @@ export default function ProfilePage() {
   const renderProfileInfo = () => {
     return (
       <>
-        <div className="mt-8 mb-4">
+        <div className="mt-4 mb-4">
           <div className="relative">
             <div className="relative w-28 h-28 rounded-full overflow-hidden shadow-2xl">
               <Image
