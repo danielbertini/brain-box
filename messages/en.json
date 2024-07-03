@@ -37,7 +37,13 @@
     }
   },
   "Profile": {
-    "Title": "Profile"
+    "Title": "Profile",
+    "Menu": {
+      "Preferences": "Preferences",
+      "AccountSecurity": "Account Security",
+      "CustomerSupport": "Customer Support",
+      "Logout": "Logout"
+    }
   },
   "Theme": {
     "Light": "Light",

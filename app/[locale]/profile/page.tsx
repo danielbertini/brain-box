@@ -2,12 +2,37 @@
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import UIButton from "@/ui/button";
-import { ChevronLeft } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  CircleHelp,
+  Lock,
+  LogOut,
+  Settings,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function ProfilePage() {
   const router = useRouter();
   const tProfile = useTranslations("Profile");
+
+  const renderMenuItem = (
+    iconLeft: React.ReactElement,
+    iconRight: React.ReactElement,
+    text: string
+  ) => {
+    return (
+      <div className="flex flex-row items-center justify-between w-full gap-4">
+        <div className="flex flex-row items-center gap-4">
+          {iconLeft && iconLeft}
+          <span className="text-secondary-900 dark:text-secondary-50 text-left text-md font-semibold">
+            {text}
+          </span>
+        </div>
+        {iconRight && iconRight}
+      </div>
+    );
+  };
 
   const renderProfileInfo = () => {
     return (
@@ -62,8 +87,30 @@ export default function ProfilePage() {
       </div>
       <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto">
         {renderProfileInfo()}
+        <div className="flex-none flex flex-col items-center justify-between h-12 w-full gap-6 mt-8">
+          {renderMenuItem(
+            <Settings className="w-8 h-8" />,
+            <ChevronRight />,
+            tProfile("Menu.Preferences")
+          )}
+          {renderMenuItem(
+            <Lock className="w-8 h-8" />,
+            <ChevronRight />,
+            tProfile("Menu.AccountSecurity")
+          )}
+          {renderMenuItem(
+            <CircleHelp className="w-8 h-8" />,
+            <ChevronRight />,
+            tProfile("Menu.CustomerSupport")
+          )}
+          {renderMenuItem(
+            <LogOut className="w-8 h-8" />,
+            <ChevronRight />,
+            tProfile("Menu.Logout")
+          )}
+        </div>
       </div>
-      <div className="flex-none flex items-center justify-between h-12 w-full"></div>
+      <div className="flex-none flex items-center justify-between h-12 w-full gap-2"></div>
     </div>
   );
 }
