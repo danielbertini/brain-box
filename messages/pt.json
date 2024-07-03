@@ -40,10 +40,10 @@
   "Profile": {
     "Title": "Perfil",
     "Menu": {
-      "Preferências": "Preferências",
-      "Segurança da Conta": "Segurança da Conta",
-      "Suporte ao Cliente": "Suporte ao Cliente",
-      "Sair": "Sair"
+      "Preferences": "Preferências",
+      "AccountSecurity": "Segurança da Conta",
+      "CustomerSupport": "Suporte ao Cliente",
+      "Logout": "Sair"
     }
   },
   "Theme": {
