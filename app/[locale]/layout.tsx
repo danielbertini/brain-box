@@ -70,7 +70,7 @@ export default async function RootLayout({
             <Suspense fallback={<UIPageLoading />}>
               <AppProvider>{children}</AppProvider>
             </Suspense>
-            <Toaster theme="system" position="top-right" duration={1500} />
+            <Toaster theme="system" position="top-right" duration={1250} />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

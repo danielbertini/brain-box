@@ -5,12 +5,63 @@ import UIButton from "@/ui/button";
 import { ChevronLeft, Ellipsis, SendHorizontal } from "lucide-react";
 import UITextField from "@/ui/textField";
 import UICard from "@/ui/card";
+import { useState } from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
-export default function ChatPage() {
+type Props = {
+  params: { locale: string };
+};
+
+export default function ChatPage({ params: { locale } }: Props) {
   const router = useRouter();
   const tApp = useTranslations("App");
   const tChat = useTranslations("Chat");
   const tForm = useTranslations("Form");
+  const tMessage = useTranslations("Form");
+
+  const [aiQuery, setAiQuery] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiMessages] = useState<any[]>([]);
+
+  const formSchema = z.object({
+    query: z
+      .string()
+      .min(4, tMessage("Error.MinSize", { min: 3 }))
+      .max(125, tMessage("Error.MaxSize", { max: 125 })),
+  });
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      query: "",
+    },
+  });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setAiLoading(true);
+
+    const response = await fetch("/api/chat/prompt", {
+      method: "POST",
+      headers: { "Accept-Language": locale },
+      body: JSON.stringify({
+        prompt: values.query,
+      }),
+    });
+
+    const responseData = await response.json();
+
+    if (response.status !== 200) {
+    } else {
+      aiMessages?.push({
+        role: "assistant",
+        content: responseData.text,
+      });
+      form.reset();
+    }
+    setAiLoading(false);
+  };
 
   const renderInstructions = () => {
     return (
@@ -81,14 +132,22 @@ export default function ChatPage() {
       <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto">
         {renderInstructions()}
       </div>
-      <div className="flex-none flex items-center justify-between h-12 w-full">
-        <UITextField
-          placeHolder={tForm("SendAMessage")}
-          className="rounded-r-none border-r-0"></UITextField>
-        <UIButton sizeType="icon" className="rounded-l-none">
-          <SendHorizontal />
-        </UIButton>
-      </div>
+      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
+        <div className="flex-none flex items-center justify-between h-12 w-full">
+          <UITextField
+            register={form.register("query")}
+            placeHolder={tForm("SendAMessage")}
+            className="rounded-r-none border-r-0"></UITextField>
+          <UIButton
+            type="submit"
+            sizeType="icon"
+            isDisabled={aiLoading}
+            isLoading={aiLoading}
+            className="rounded-l-none">
+            <SendHorizontal />
+          </UIButton>
+        </div>
+      </form>
     </div>
   );
 }
