@@ -102,7 +102,8 @@
       "YouWantToDeletePlaylist": "Tem certeza de que deseja remover esta playlist? Todas as informações relacionadas à playlist serão perdidas. Esta ação não pode ser desfeita.",
       "YouWantToDeleteItem": "Tem certeza de que deseja remover este item? Todas as informações relacionadas ao item serão perdidas. Esta ação não pode ser desfeita.",
       "CreateScreenInstructions": "Para sincronizar com uma tela, insira o código gerado no aplicativo Nivens Player acessando (d.nivens.com.br) no navegador de sua smart TV.",
-      "TotalScreens": "{count, plural, =0 {Nenhuma tela} =1 {1 tela} other {# telas}}"
+      "TotalScreens": "{count, plural, =0 {Nenhuma tela} =1 {1 tela} other {# telas}}",
+      "IDontKnow": "Desculpe, não sei como ajudar com isso."
     },
     "Error": {
       "InvalidEmail": "E-mail inválido",

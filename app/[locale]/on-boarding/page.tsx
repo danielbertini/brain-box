@@ -32,7 +32,7 @@ export default function OnBoardingPage() {
   ];
 
   return (
-    <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
+    <div className="flex flex-col items-center justify-between h-full gap-4">
       <div className="w-full flex items-center justify-between">
         <div className="container mx-auto flex items-center justify-between gap-2">
           <div className="flex gap-2">
@@ -48,7 +48,7 @@ export default function OnBoardingPage() {
           </UIButton>
         </div>
       </div>
-      <div className="relative w-full sm:w-[362px] h-full rounded-3xl overflow-hidden shadow-2xl">
+      <div className="relative w-full  h-full rounded-3xl overflow-hidden shadow-2xl">
         <Image
           alt="Astronaut"
           src="/images/astronaut.png"

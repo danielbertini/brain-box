@@ -102,7 +102,8 @@
       "YouWantToDeletePlaylist": "Are you sure you want to delete this playlist? All information related to the playlist will be lost. This action cannot be undone.",
       "YouWantToDeleteItem": "Are you sure you want to delete this item? All information related to the item will be lost. This action cannot be undone.",
       "CreateScreenInstructions": "To sync with a screen, enter the generated code in the Nivens Player app by accessing (d.nivens.com.br) on your smart TV's browser.",
-      "TotalScreens": "{count, plural, =0 {No screen} =1 {1 screen} other {# screens}}"
+      "TotalScreens": "{count, plural, =0 {No screen} =1 {1 screen} other {# screens}}",
+      "IDontKnow": "Sorry, I don't know how to help with that."
     },
     "Error": {
       "InvalidEmail": "Invalid Email",

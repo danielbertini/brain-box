@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
 import createSupabaseServerClient from "@/lib/supabase-server";
+import { getTranslations } from "next-intl/server";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY!,
@@ -30,6 +31,7 @@ const generatePrompt = (
     responda à pergunta usando apenas essas informações no formato de texto simples.
     Respire antes de responder e seja claro e conciso.
     Responda apenas se tiver certeza da resposta.
+    Você não deverá retornar apenas com texto simples, sem formatação ou marcação.
     Se você não tiver certeza e a resposta não estiver explicitamente escrita na documentação,
     diga "Desculpe, não sei como ajudar com isso.`}
 
@@ -47,11 +49,15 @@ const generatePrompt = (
 };
 
 export async function POST(req: Request) {
-  try {
-    const supabase = await createSupabaseServerClient();
-    const locale = req.headers.get("accept-language");
-    const body = await req.json();
+  const supabase = await createSupabaseServerClient();
+  const locale = req.headers.get("accept-language");
+  const body = await req.json();
+  const tMessage = await getTranslations({
+    locale: locale ?? "en",
+    namespace: "Message",
+  });
 
+  try {
     const result = await openai.embeddings.create({
       input: body.prompt,
       model: "text-embedding-ada-002",
@@ -79,6 +85,7 @@ export async function POST(req: Request) {
 
       contextText += `${content.trim()}\n--\n`;
     }
+
     if (contextText) {
       const prompt = generatePrompt(contextText, body.prompt, locale as string);
 
@@ -94,12 +101,12 @@ export async function POST(req: Request) {
       });
     } else {
       return NextResponse.json({
-        text: "Desculpe, não sei como ajudar com isso.",
+        text: tMessage("Info.IDontKnow"),
       });
     }
   } catch (error) {
     return NextResponse.json(
-      { message: "Ocorreu um erro interno." },
+      { message: tMessage("Error.Unexpected") },
       { status: 500 }
     );
   }

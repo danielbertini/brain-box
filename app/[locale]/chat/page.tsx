@@ -177,8 +177,8 @@ export default function ChatPage({ params: { locale } }: Props) {
   }, [aiLoading]);
 
   return (
-    <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
-      <div className="flex-none flex items-center justify-between w-full gap-2">
+    <div className="flex flex-col items-center justify-between h-full gap-4 w-full">
+      <div className="flex-none flex items-center justify-between gap-2  w-full">
         <div className="w-12 min-w-12 h-12 min-h-12">
           <UIButton
             variant="flat"
@@ -208,13 +208,16 @@ export default function ChatPage({ params: { locale } }: Props) {
       <div
         ref={ref as React.RefObject<HTMLDivElement>}
         className={cn(
-          `flex-1 flex items-center justify-start w-full overflow-y-auto rounded-xl`,
+          `flex-1 flex items-center justify-start  w-full overflow-y-auto rounded-xl`,
           aiMessages.length === 0 ? "flex-col" : "flex-col-reverse gap-4"
         )}>
         {aiMessages.length === 0 ? renderInstructions() : renderChat()}
       </div>
-      <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="flex-none flex items-center justify-between h-12 w-full">
+      <div className="flex-none flex items-center justify-between  w-full">
+        <form
+          noValidate
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex item-center justify-between w-full">
           <UITextField
             register={form.register("query")}
             placeHolder={tForm("SendAMessage")}
@@ -227,8 +230,8 @@ export default function ChatPage({ params: { locale } }: Props) {
             className="rounded-l-none">
             <SendHorizontal />
           </UIButton>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

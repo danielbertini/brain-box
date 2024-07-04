@@ -68,7 +68,11 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange>
             <Suspense fallback={<UIPageLoading />}>
-              <AppProvider>{children}</AppProvider>
+              <AppProvider>
+                <div className="container max-w-xl mx-auto p-4 h-full">
+                  {children}
+                </div>
+              </AppProvider>
             </Suspense>
             <Toaster theme="system" position="top-right" duration={1250} />
           </ThemeProvider>

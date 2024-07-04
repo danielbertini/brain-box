@@ -75,7 +75,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
+    <div className="flex flex-col items-center justify-between h-full gap-4">
       <div className="flex-none flex items-center justify-between w-full gap-2">
         <div className="w-12 min-w-12 h-12 min-h-12">
           <UIButton

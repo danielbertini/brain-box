@@ -30,7 +30,7 @@ export default function UITextField({
   ...props
 }: UITextFieldProps) {
   return (
-    <TextField {...props} className="flex flex-col">
+    <TextField {...props} className="flex flex-col w-full">
       <Label className="font-bold text-secondary-900 dark:text-secondary-100">
         {label}
       </Label>

@@ -11,7 +11,7 @@ export default function EditInformationsPage() {
   const tEditInformations = useTranslations("EditInformations");
 
   return (
-    <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
+    <div className="flex flex-col items-center justify-between h-full gap-4">
       <div className="flex-none flex items-center justify-between w-full gap-2">
         <div className="w-12 min-w-12 h-12 min-h-12">
           <UIButton
@@ -30,12 +30,10 @@ export default function EditInformationsPage() {
         </div>
         <div className="w-12 min-w-12 h-12 min-h-12"></div>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto pt-6">
-        <div className="flex flex-col space-y-4">
-          <UITextField label={tForm("FullName")}></UITextField>
-          <UITextField label={tForm("Email")}></UITextField>
-          <UITextField label={tForm("Password")}></UITextField>
-        </div>
+      <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto pt-4 space-y-4">
+        <UITextField label={tForm("FullName")}></UITextField>
+        <UITextField label={tForm("Email")}></UITextField>
+        <UITextField label={tForm("Password")}></UITextField>
       </div>
       <div className="flex-none flex items-center justify-start w-full gap-2">
         <UIButton onPress={() => {}} className="w-full">
