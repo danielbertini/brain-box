@@ -208,7 +208,7 @@ export default function ChatPage({ params: { locale } }: Props) {
       <div
         ref={ref as React.RefObject<HTMLDivElement>}
         className={cn(
-          `flex-1 flex items-center justify-start w-full overflow-y-auto`,
+          `flex-1 flex items-center justify-start w-full overflow-y-auto rounded-xl`,
           aiMessages.length === 0 ? "flex-col" : "flex-col-reverse gap-4"
         )}>
         {aiMessages.length === 0 ? renderInstructions() : renderChat()}
