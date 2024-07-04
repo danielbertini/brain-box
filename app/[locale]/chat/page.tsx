@@ -155,10 +155,10 @@ export default function ChatPage({ params: { locale } }: Props) {
                       <Logo className="w-12 h-12 rounded-xl overflow-hidden shadow-lg" />
                       <div className="flex items-center justify-center">
                         <UIButton variant="link" sizeType="icon">
-                          <Share />
+                          <Copy />
                         </UIButton>
                         <UIButton variant="link" sizeType="icon">
-                          <Copy />
+                          <Share />
                         </UIButton>
                       </div>
                     </>
