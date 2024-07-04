@@ -5,10 +5,11 @@ import UIButton from "@/ui/button";
 import { ChevronLeft, Ellipsis, SendHorizontal } from "lucide-react";
 import UITextField from "@/ui/textField";
 import UICard from "@/ui/card";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { cn } from "@/lib/utils";
 
 type Props = {
   params: { locale: string };
@@ -20,6 +21,7 @@ export default function ChatPage({ params: { locale } }: Props) {
   const tChat = useTranslations("Chat");
   const tForm = useTranslations("Form");
   const tMessage = useTranslations("Form");
+  const ref = useRef<HTMLDivElement | null>(null);
 
   const [aiQuery, setAiQuery] = useState("");
   const [aiLoading, setAiLoading] = useState(false);
@@ -41,6 +43,11 @@ export default function ChatPage({ params: { locale } }: Props) {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setAiLoading(true);
+
+    aiMessages?.push({
+      role: "user",
+      content: values.query,
+    });
 
     const response = await fetch("/api/chat/prompt", {
       method: "POST",
@@ -100,6 +107,34 @@ export default function ChatPage({ params: { locale } }: Props) {
     );
   };
 
+  const renderChat = () => {
+    return (
+      <>
+        {aiMessages
+          .slice()
+          .reverse()
+          .map((message, index) => {
+            return (
+              <UICard
+                key={index}
+                variant="flat"
+                className={`p-4 text-sm text-balance w-full ${
+                  message.role === "user"
+                    ? "bg-secondary-500 text-secondary-50"
+                    : "bg-secondary-50 text-secondary-500"
+                }`}>
+                {message.content}
+              </UICard>
+            );
+          })}
+      </>
+    );
+  };
+
+  useEffect(() => {
+    ref?.current?.scrollTo(0, ref?.current?.scrollHeight);
+  }, [aiLoading]);
+
   return (
     <div className="p-8 flex flex-col items-center justify-between h-full gap-4">
       <div className="flex-none flex items-center justify-between w-full gap-2">
@@ -129,8 +164,13 @@ export default function ChatPage({ params: { locale } }: Props) {
           </UIButton>
         </div>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-start w-full overflow-y-auto">
-        {renderInstructions()}
+      <div
+        ref={ref as React.RefObject<HTMLDivElement>}
+        className={cn(
+          `flex-1 flex items-center justify-start w-full overflow-y-auto`,
+          aiMessages.length === 0 ? "flex-col" : "flex-col-reverse gap-4"
+        )}>
+        {aiMessages.length === 0 ? renderInstructions() : renderChat()}
       </div>
       <form noValidate onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex-none flex items-center justify-between h-12 w-full">
