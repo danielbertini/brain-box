@@ -69,7 +69,7 @@ export default async function RootLayout({
             disableTransitionOnChange>
             <Suspense fallback={<UIPageLoading />}>
               <AppProvider>
-                <div className="container max-w-xl mx-auto p-4 h-full">
+                <div className="container max-w-xl mx-auto p-6 h-full">
                   {children}
                 </div>
               </AppProvider>
