@@ -1,4 +1,4 @@
-# Teste LabotIt
+# Teste LaborIt
 
 Desenvolvimento de uma interface de usuário para um chat inteligente visando
 aprimorar a comunicação e o suporte ao cliente na empresa FinTechX.
