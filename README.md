@@ -30,7 +30,7 @@ https://www.figma.com/file/GVJntS7Sv1ludiySw12tka/Laborit-UI-Test-File
 ## Considerações de UI/UX
 
 - Levando em consideração que optei pelo desenvolvimento ReactJs/NextJs (web) fiz alguns ajustes no layout para dar melhor suporte à responsividade.
-- Fiz também algumas mudanças/sugestões em relação ao design proposto de acordo com meu entendimento sobre UI/UX, em um contexto normal penso que isso seria algo a ser alinhado com a equipe de design antes, mas para efeitos de teste achei bacana expor também minhas sugestões.
+- Fiz também algumas mudanças/sugestões em relação ao design proposto de acordo com meu entendimento sobre UI/UX, em um contexto normal penso que isso seria algo a ser alinhado com a equipe de design, mas para efeitos de teste achei interessante expor também minhas sugestões.
 - Para ganhar mais agilidade não utilizei os ícones propostos no protótipo, para isso utilizei a lib (https://lucide.dev/icons/)
 - Multi indiomas (EN/PT) com detecção automática.
 - Theme (Light/Dark) com detecção automática.
