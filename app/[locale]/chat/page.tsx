@@ -2,7 +2,14 @@
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import UIButton from "@/ui/button";
-import { ChevronLeft, Ellipsis, SendHorizontal } from "lucide-react";
+import {
+  ChevronLeft,
+  Copy,
+  Edit,
+  Ellipsis,
+  SendHorizontal,
+  Share,
+} from "lucide-react";
 import UITextField from "@/ui/textField";
 import UICard from "@/ui/card";
 import { useEffect, useRef, useState } from "react";
@@ -10,6 +17,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
+import Logo from "@/components/logo";
+import Image from "next/image";
 
 type Props = {
   params: { locale: string };
@@ -117,12 +126,44 @@ export default function ChatPage({ params: { locale } }: Props) {
             return (
               <UICard
                 key={index}
-                variant="flat"
-                className={`p-4 text-sm text-balance w-full ${
-                  message.role === "user"
-                    ? "bg-secondary-500 text-secondary-50"
-                    : "bg-secondary-50 text-secondary-500"
-                }`}>
+                variant={message.role === "user" ? "flat" : "outlined"}
+                className={cn(
+                  `p-4 text-balance w-full text-secondary-900 dark:text-secondary-50`
+                )}>
+                <div className="flex flex-row items-center justify-between mb-4">
+                  {message.role === "user" ? (
+                    <>
+                      <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                          alt="Astronaut"
+                          src="/images/astronaut.png"
+                          priority
+                          fill
+                          style={{
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <UIButton variant="link" sizeType="icon">
+                          <Edit />
+                        </UIButton>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Logo className="w-12 h-12 rounded-xl overflow-hidden shadow-lg" />
+                      <div className="flex items-center justify-center">
+                        <UIButton variant="link" sizeType="icon">
+                          <Share />
+                        </UIButton>
+                        <UIButton variant="link" sizeType="icon">
+                          <Copy />
+                        </UIButton>
+                      </div>
+                    </>
+                  )}
+                </div>
                 {message.content}
               </UICard>
             );

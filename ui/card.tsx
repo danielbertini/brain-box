@@ -36,7 +36,7 @@ const UICard = forwardRef<HTMLDivElement, UICardProps>(
         `,
           variant === "outlined" &&
             "bg-secondary-100/80 dark:bg-secondary-950/80",
-          variant === "flat" && "!bg-secondary-500/10 border-secondary-500/0",
+          variant === "flat" && "bg-secondary-500/10 border-secondary-500/0",
           shadow && `shadow-${shadow}`,
           className
         )}>
